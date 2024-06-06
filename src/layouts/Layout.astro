@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string
+}
+import "@fontsource-variable/outfit"
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Colegio Carlos Cueto Fernandini</title>
+    <meta
+      name="description"
+      content="Colegio Carlos Cueto Fernandini, una institución educativa ubicada en la ciudad de San Carlos, Departamento de Colón, Provincia de Río Negrito, Argentina. Brindamos educación de calidad con programas y talleres exclusivos."
+    />
+    <meta name="author" content="Elias" />
+    <meta
+      name="keywords"
+      content="colegio, cueto, fernandini, carlos, educacion, primaria, secundaria, educación, profesores, alumnos"
+    />
+    <meta name="language" content="es" />
+    <meta name="robots" content="index, follow" />
+    <link href="//vjs.zencdn.net/7.0/video-js.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: "Outfit Variable", sans-serif;
+    background: #13151a;
+    background-size: 224px;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>

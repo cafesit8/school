@@ -1,0 +1,18 @@
+---
+import Subtitle from "../components/Subtitle.astro"
+import Layout from "../layouts/Layout.astro"
+import Home from "../sections/Home.astro"
+import Nosotros from "../sections/Nosotros.astro"
+import Gallery from "../sections/Gallery.astro"
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <Home />
+    <Subtitle nameId="nosotros" subtitle="Sobre Nosotros" />
+    <Nosotros />
+    <Subtitle nameId="galeria" subtitle="Galería" />
+    <Gallery />
+  </main>
+</Layout>
+

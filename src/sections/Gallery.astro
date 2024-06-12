@@ -1,26 +1,24 @@
 ---
-import "photoswipe/style.css"
-// import "@videojs/themes/dist/forest/index.css"
 ---
 
 <section class="w-full m-auto px-3 bg-eucalyptus-50">
   <div class="max-w-7xl m-auto">
     <masonry-layout
-      class="lg:mx-auto"
-      id="gallery"
-      cols="3"
-      gap="12"
-      maxcolwidth="100"
+    class="lg:mx-auto"
+    id="gallery"
+    cols="3"
+    gap="12"
+    maxcolwidth="100"
     >
-      <a
-        class="rounded-md overflow-hidden"
-        href="/img1.jpg"
-        data-pswp-width="1600"
-        data-pswp-height="1600"
+    <a
+    class="rounded-md overflow-hidden"
+    href="/img1.jpg"
+    data-pswp-width="1600"
+    data-pswp-height="1600"
         target="_blank"
         aria-label="Imagen de la subdirectora del colegio"
       >
-        <img src="/img1.jpg" width="1600" height="1600" alt="" loading="lazy" />
+        <img fetchpriority="low" src="/img1.jpg" width="1600" height="1600" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -30,7 +28,7 @@ import "photoswipe/style.css"
         target="_blank"
         aria-label="Imagen del aula de computación"
       >
-        <img src="/img5.jpg" width="1600" height="1200" alt="" loading="lazy" />
+        <img fetchpriority="low" src="/img5.jpg" width="1600" height="1200" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -40,7 +38,7 @@ import "photoswipe/style.css"
         target="_blank"
         aria-label="Alumnos en la formación"
       >
-        <img src="/img2.jpg" width="1600" height="1600" alt="" loading="lazy" />
+        <img fetchpriority="low" src="/img2.jpg" width="1600" height="1600" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -50,7 +48,7 @@ import "photoswipe/style.css"
         target="_blank"
         aria-label="Conferencia en el auditorio"
       >
-        <img src="/img3.jpg" width="1600" height="1600" alt="" loading="lazy" />
+        <img fetchpriority="low" src="/img3.jpg" width="1600" height="1600" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -60,7 +58,7 @@ import "photoswipe/style.css"
         target="_blank"
         aria-label="Alumnas en formación"
       >
-        <img src="/img4.jpg" width="1600" height="1600" alt="" loading="lazy" />
+        <img fetchpriority="low" src="/img4.jpg" width="1600" height="1600" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -70,7 +68,7 @@ import "photoswipe/style.css"
         target="_blank"
         aria-label="Aula de conmputación"
       >
-        <img src="/img6.jpg" width="1600" height="1204" alt="" loading="lazy" />
+        <img fetchpriority="low" src="/img6.jpg" width="1600" height="1204" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -80,7 +78,7 @@ import "photoswipe/style.css"
         target="_blank"
         aria-label="Profesores"
       >
-        <img src="/teachers.webp" width="1600" height="1204" alt="" loading="lazy" />
+        <img fetchpriority="low" src="/teachers.webp" width="1600" height="1204" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -90,7 +88,7 @@ import "photoswipe/style.css"
         target="_blank"
         aria-label="Alumnos"
       >
-        <img src="/students.webp" width="700" height="322" alt="" loading="lazy" />
+        <img fetchpriority="low" src="/students.webp" width="700" height="322" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -100,7 +98,7 @@ import "photoswipe/style.css"
         target="_blank"
         aria-label="Dirección"
       >
-        <img src="/direction.jpg" width="1600" height="1200" alt="" loading="lazy" />
+        <img fetchpriority="low" src="/direction.jpg" width="1600" height="1200" alt="" loading="lazy" />
       </a>
     </masonry-layout>
   </div>
@@ -118,6 +116,7 @@ import "photoswipe/style.css"
   window.addEventListener("DOMContentLoaded", async () => {
     try {
       await import("@appnest/masonry-layout")
+      await import("photoswipe/style.css")
       const module = await import("photoswipe/lightbox")
       const PhotoSwipeLightbox = module.default
       const lightbox = new PhotoSwipeLightbox({

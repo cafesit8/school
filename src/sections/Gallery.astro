@@ -9,7 +9,7 @@ import "photoswipe/style.css"
       class="lg:mx-auto"
       id="gallery"
       cols="3"
-      gap="14"
+      gap="12"
       maxcolwidth="100"
     >
       <a
@@ -18,9 +18,9 @@ import "photoswipe/style.css"
         data-pswp-width="1600"
         data-pswp-height="1600"
         target="_blank"
-        data-cropped="true"
+        aria-label="Imagen de la subdirectora del colegio"
       >
-        <img src="/img1.jpg" alt="" loading="lazy" />
+        <img src="/img1.jpg" width="1600" height="1600" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -28,8 +28,9 @@ import "photoswipe/style.css"
         data-pswp-width="1600"
         data-pswp-height="1200"
         target="_blank"
+        aria-label="Imagen del aula de computación"
       >
-        <img src="/img5.jpg" alt="" />
+        <img src="/img5.jpg" width="1600" height="1200" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -37,8 +38,9 @@ import "photoswipe/style.css"
         data-pswp-width="1600"
         data-pswp-height="1600"
         target="_blank"
+        aria-label="Alumnos en la formación"
       >
-        <img src="/img2.jpg" alt="" />
+        <img src="/img2.jpg" width="1600" height="1600" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -46,8 +48,9 @@ import "photoswipe/style.css"
         data-pswp-width="1600"
         data-pswp-height="1600"
         target="_blank"
+        aria-label="Conferencia en el auditorio"
       >
-        <img src="/img3.jpg" alt="" />
+        <img src="/img3.jpg" width="1600" height="1600" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -55,8 +58,9 @@ import "photoswipe/style.css"
         data-pswp-width="1600"
         data-pswp-height="1600"
         target="_blank"
+        aria-label="Alumnas en formación"
       >
-        <img src="/img4.jpg" alt="" />
+        <img src="/img4.jpg" width="1600" height="1600" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -64,8 +68,9 @@ import "photoswipe/style.css"
         data-pswp-width="1600"
         data-pswp-height="1204"
         target="_blank"
+        aria-label="Aula de conmputación"
       >
-        <img src="/img6.jpg" alt="" />
+        <img src="/img6.jpg" width="1600" height="1204" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -73,8 +78,9 @@ import "photoswipe/style.css"
         data-pswp-width="1600"
         data-pswp-height="1204"
         target="_blank"
+        aria-label="Profesores"
       >
-        <img src="/teachers.webp" alt="" />
+        <img src="/teachers.webp" width="1600" height="1204" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -82,8 +88,9 @@ import "photoswipe/style.css"
         data-pswp-width="700"
         data-pswp-height="322"
         target="_blank"
+        aria-label="Alumnos"
       >
-        <img src="/students.webp" alt="" />
+        <img src="/students.webp" width="700" height="322" alt="" loading="lazy" />
       </a>
       <a
         class="rounded-md overflow-hidden"
@@ -91,14 +98,15 @@ import "photoswipe/style.css"
         data-pswp-width="1600"
         data-pswp-height="1200"
         target="_blank"
+        aria-label="Dirección"
       >
-        <img src="/direction.jpg" alt="" />
+        <img src="/direction.jpg" width="1600" height="1200" alt="" loading="lazy" />
       </a>
     </masonry-layout>
   </div>
 </section>
 <script>
-  window.addEventListener("resize", () => {
+  window.addEventListener("load", () => {
     const $masonry = document.querySelector("masonry-layout")
     if (window.screen.width < 660) {
       $masonry?.setAttribute("cols", "2")

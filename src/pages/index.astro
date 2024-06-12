@@ -4,10 +4,12 @@ import Layout from "../layouts/Layout.astro"
 import Home from "../sections/Home.astro"
 import Nosotros from "../sections/Nosotros.astro"
 import Gallery from "../sections/Gallery.astro"
+import Header from "../components/Header.astro"
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
+    <Header />
     <Home />
     <Subtitle nameId="nosotros" subtitle="Sobre Nosotros" />
     <Nosotros />

@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// import withMT from "@material-tailwind/react/utils/withMT";
 
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -22,7 +21,8 @@ export default {
       }
     },
   },
-  // plugins: [
-  //   require('tailwindcss-animated')
-  // ],
+  plugins: [
+    // require('tailwindcss-animated')
+    require('flowbite/plugin')
+  ],
 }

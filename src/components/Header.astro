@@ -78,6 +78,7 @@
   import { Drawer } from "flowbite"
   import type { DrawerOptions } from 'flowbite'
   const $drawer = document.getElementById("drawer-js-example")
+  const $button = document.getElementById("triggerEl")
 
   const options: DrawerOptions = {
     placement: "right",
@@ -93,5 +94,9 @@
     override: true,
   }
 
-  new Drawer($drawer, options, instanceOptions)
+  const drawer = new Drawer($drawer, options, instanceOptions)
+
+  $button?.addEventListener("click", () => {
+    drawer?.show()
+  })
 </script>

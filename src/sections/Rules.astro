@@ -1,0 +1,34 @@
+---
+import { normas } from "../data/normas"
+---
+
+<section class="w-full m-auto px-3 bg-eucalyptus-50">
+  <div
+    class="max-w-7xl m-auto grid gap-3 pb-24 md:[grid-template-columns:repeat(auto-fill,minmax(350px,1fr))] [grid-template-columns:repeat(auto-fill,minmax(250px,1fr))]"
+  >
+    {
+      normas.map((norma) => (
+        <article class="w-full bg-white rounded-md p-2">
+          <picture class="block w-full md:h-[280px] h-[200px] rounded-md overflow-hidden">
+            <img
+              class="w-full h-full object-cover"
+              width={norma.width}
+              height={norma.height}
+              src={norma.img}
+              alt={norma.alt}
+              loading="lazy"
+            />
+          </picture>
+          <div class="p-2">
+            <h3 class="text-pretty font-normal md:text-2xl text-lg text-eucalyptus-800">
+              {norma.subtitle}
+            </h3>
+            <p class="text-eucalyptus-900 font-light md:text-base text-sm">
+              {norma.text}
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

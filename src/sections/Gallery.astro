@@ -1,5 +1,5 @@
 ---
-
+import { images } from "../data/Images"
 ---
 
 <section class="w-full m-auto px-3 bg-eucalyptus-50">
@@ -11,159 +11,27 @@
       gap="12"
       maxcolwidth="100"
     >
-      <a
-        class="rounded-md overflow-hidden"
-        href="/img1.webp"
-        data-pswp-width="1600"
-        data-pswp-height="1600"
-        target="_blank"
-        aria-label="Imagen de la subdirectora del colegio"
-      >
-        <img
-          fetchpriority="low"
-          src="/img1.webp"
-          width="1600"
-          height="1600"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <a
-        class="rounded-md overflow-hidden"
-        href="/img5.webp"
-        data-pswp-width="1600"
-        data-pswp-height="1200"
-        target="_blank"
-        aria-label="Imagen del aula de computación"
-      >
-        <img
-          fetchpriority="low"
-          src="/img5.webp"
-          width="1600"
-          height="1200"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <a
-        class="rounded-md overflow-hidden"
-        href="/img2.webp"
-        data-pswp-width="1600"
-        data-pswp-height="1600"
-        target="_blank"
-        aria-label="Alumnos en la formación"
-      >
-        <img
-          fetchpriority="low"
-          src="/img2.webp"
-          width="1600"
-          height="1600"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <a
-        class="rounded-md overflow-hidden"
-        href="/img3.webp"
-        data-pswp-width="1600"
-        data-pswp-height="1600"
-        target="_blank"
-        aria-label="Conferencia en el auditorio"
-      >
-        <img
-          fetchpriority="low"
-          src="/img3.webp"
-          width="1600"
-          height="1600"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <a
-        class="rounded-md overflow-hidden"
-        href="/img4.webp"
-        data-pswp-width="1600"
-        data-pswp-height="1600"
-        target="_blank"
-        aria-label="Alumnas en formación"
-      >
-        <img
-          fetchpriority="low"
-          src="/img4.webp"
-          width="1600"
-          height="1600"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <a
-        class="rounded-md overflow-hidden"
-        href="/img6.webp"
-        data-pswp-width="1600"
-        data-pswp-height="1204"
-        target="_blank"
-        aria-label="Aula de conmputación"
-      >
-        <img
-          fetchpriority="low"
-          src="/img6.webp"
-          width="1600"
-          height="1204"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <a
-        class="rounded-md overflow-hidden"
-        href="/teachers.webp"
-        data-pswp-width="1600"
-        data-pswp-height="1204"
-        target="_blank"
-        aria-label="Profesores"
-      >
-        <img
-          fetchpriority="low"
-          src="/teachers.webp"
-          width="1600"
-          height="1204"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <a
-        class="rounded-md overflow-hidden"
-        href="/students.webp"
-        data-pswp-width="700"
-        data-pswp-height="322"
-        target="_blank"
-        aria-label="Alumnos"
-      >
-        <img
-          fetchpriority="low"
-          src="/students.webp"
-          width="700"
-          height="322"
-          alt=""
-          loading="lazy"
-        />
-      </a>
-      <a
-        class="rounded-md overflow-hidden"
-        href="/direction.jpg"
-        data-pswp-width="1600"
-        data-pswp-height="1200"
-        target="_blank"
-        aria-label="Dirección"
-      >
-        <img
-          fetchpriority="low"
-          src="/direction.jpg"
-          width="1600"
-          height="1200"
-          alt=""
-          loading="lazy"
-        />
-      </a>
+      {
+        images.map((img) => (
+          <a
+            class="rounded-md overflow-hidden"
+            href={img.href}
+            data-pswp-width={img.width}
+            data-pswp-height={img.height}
+            target="_blank"
+            aria-label={img.label}
+          >
+            <img
+              fetchpriority="low"
+              src={img.href}
+              width={img.width}
+              height={img.height}
+              alt={img.label}
+              loading="lazy"
+            />
+          </a>
+        ))
+      }
     </masonry-layout>
   </div>
 </section>
